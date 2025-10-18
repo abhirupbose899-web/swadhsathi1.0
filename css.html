@@ -1,0 +1,342 @@
+/* SwadhSathi - style.css */
+
+/* --- 1. Global Setup & Variables --- */
+:root {
+    --font-primary: 'Lato', sans-serif; /* Example: Clean sans-serif */
+    --font-headings: 'Merriweather', serif; /* Example: Elegant serif for titles */
+    
+    /* Spice-inspired Color Palette */
+    --color-saffron: #F4C430;  /* Saffron Yellow */
+    --color-cinnamon: #D2691E; /* Cinnamon Brown */
+    --color-cardamom: #4CAF50; /* Cardamom Green */
+    --color-chili: #C00000;     /* Chili Red (for accents) */
+    
+    --text-dark: #333;
+    --text-light: #f4f4f4;
+    --bg-light: #FFFFFF;
+    --bg-dark: #1a1a1a;
+    --border-color: #eee;
+
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --shadow-strong: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode (toggled with JS) */
+body.dark-mode {
+    --text-dark: #f4f4f4;
+    --text-light: #333;
+    --bg-light: #1a1a1a;
+    --bg-dark: #FFFFFF;
+    --border-color: #444;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* --- 2. Typography & Base Elements --- */
+h1, h2, h3, h4, h5 {
+    font-family: var(--font-headings);
+    color: var(--color-cinnamon);
+    line-height: 1.3;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+a {
+    color: var(--color-cardamom);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: var(--color-chili);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- 3. Header & Navigation --- */
+.main-header {
+    background: var(--bg-light);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow-light);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-headings);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-cinnamon);
+}
+.logo span {
+    color: var(--color-saffron);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 5px;
+}
+.nav-links a:hover, .nav-links a.active {
+    background-color: var(--color-saffron);
+    color: #fff;
+}
+
+/* --- 4. Buttons & Forms --- */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-strong);
+}
+
+.btn-primary {
+    background-color: var(--color-cinnamon);
+    color: #fff;
+}
+.btn-secondary {
+    background-color: var(--color-saffron);
+    color: var(--text-dark);
+}
+.btn-ai {
+    background: linear-gradient(90deg, var(--color-saffron), var(--color-cinnamon));
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: var(--shadow-light);
+}
+
+/* --- 5. Recipe Card Component --- */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.recipe-card {
+    background: var(--bg-light);
+    border-radius: 12px;
+    box-shadow: var(--shadow-strong);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+.recipe-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.recipe-card-content {
+    padding: 20px;
+}
+.recipe-card-content h3 {
+    margin-top: 0;
+}
+.recipe-card-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 15px;
+}
+
+/* --- 6. Page-Specific: Home --- */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-bg.jpg'); /* Placeholder */
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    color: #fff;
+}
+.hero h1 {
+    color: #fff;
+    font-size: 3rem;
+}
+.hero h1 span {
+    color: var(--color-saffron);
+}
+
+.ai-scanner-promo {
+    text-align: center;
+    padding: 40px;
+    background-color: #fdf8e7; /* Light saffron bg */
+    border-radius: 12px;
+    margin: 30px 0;
+    border: 2px dashed var(--color-saffron);
+}
+
+/* --- 7. Page-Specific: Recipe Detail --- */
+.recipe-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.recipe-main-image {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: var(--shadow-strong);
+}
+.recipe-meta-bar {
+    display: flex;
+    justify-content: space-around;
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: var(--shadow-light);
+}
+.meta-item {
+    text-align: center;
+}
+.meta-item strong {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--color-cinnamon);
+}
+
+.recipe-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+}
+.recipe-ingredients ul, .recipe-instructions ol {
+    list-style-position: inside;
+    padding-left: 0;
+}
+.recipe-ingredients li, .recipe-instructions li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+/* --- 8. Page-Specific: AI Scanner --- */
+.scanner-container {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 30px;
+    border: 2px dashed var(--color-cinnamon);
+    border-radius: 12px;
+    background: #fdf8e7;
+}
+.scanner-container i {
+    font-size: 4rem; /* Icon placeholder */
+    color: var(--color-saffron);
+}
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+.upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* --- 9. Footer --- */
+.main-footer {
+    background: var(--text-dark);
+    color: var(--text-light);
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+.footer-grid h4 {
+    color: var(--color-saffron);
+}
+.footer-grid ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-grid li {
+    margin-bottom: 10px;
+}
+.footer-grid a {
+    color: var(--text-light);
+}
+.footer-grid a:hover {
+    color: var(--color-saffron);
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #555;
+    padding-top: 20px;
+}
+
+/* --- 10. Responsive --- */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Add JS for mobile menu toggle */
+    }
+    .recipe-content-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
