@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-m-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>SwadhSathi: 1000+ Authentic Pan-Indian Recipes & AI Recipe Scanner</title>
+    
+    <meta name="description" content="Discover 1000+ authentic Indian recipes from every region. Use our AI scanner to find recipes based on the ingredients you have. Start cooking with SwadhSathi!">
+    
+    <link rel="canonical" href="https://www.swadhsathi.com/">
+    
+    <meta property="og:title" content="SwadhSathi: Pan-Indian Recipes & AI Scanner">
+    <meta property="og:description" content="Find authentic recipes for what's in your pantry.">
+    <meta property="og:image" content="https://www.swadhsathi.com/images/social-share.jpg">
+    <meta property="og:url" content="https://www.swadhsathi.com/">
+    <meta property="og:type" content="website">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SwadhSathi: Pan-Indian Recipes & AI Scanner">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SwadhSathi",
+      "url": "https://www.swadhsathi.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.swadhsathi.com/explore?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="main-nav container">
+            <a href="/" class="logo">Swadh<span>Sathi</span></a>
+            <ul class="nav-links">
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/explore.html">Recipe Explorer</a></li>
+                <li><a href="/scanner.html">AI Scanner</a></li>
+                <li><a href="/community">Community</a></li>
+                <li><a href="/login">Login/Profile</a></li>
+            </ul>
+            </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Find Your <span>Swadh</span>.</h1>
+            <p>1000+ Authentic Recipes from Every Corner of India.</p>
+            <form action="/explore.html" method="get">
+                <input type="search" name="q" class="search-bar" placeholder="Search for 'Paneer Butter Masala', 'Dosa', 'Bengali'...">
+            </form>
+        </section>
+
+        <div class="container">
+            <section class="ai-scanner-promo">
+                <h2>Don't know what to cook?</h2>
+                <p>Use our AI scanner to take a photo of your ingredients and get instant recipe ideas!</p>
+                <a href="/scanner.html" class="btn btn-ai">Cook With What You Have 📸</a>
+            </section>
+
+            <section class="featured-recipes">
+                <h2>Today's Featured Recipes</h2>
+                <div class="recipe-grid">
+                    <article class="recipe-card">
+                        <a href="/recipe-detail.html"> <img src="images/paneer-butter-masala.jpg" alt="A rich bowl of Paneer Butter Masala" class="recipe-card-img">
+                            <div class="recipe-card-content">
+                                <h3>Paneer Butter Masala</h3>
+                                <p>A creamy, timeless North Indian classic.</p>
+                                <div class="recipe-card-meta">
+                                    <span>North Indian</span>
+                                    <span>⭐ 4.8 (250)</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="recipe-card">
+                        <a href="/recipe/masala-dosa">
+                            <img src="images/masala-dosa.jpg" alt="A crispy Masala Dosa with chutney" class="recipe-card-img">
+                            <div class="recipe-card-content">
+                                <h3>Masala Dosa</h3>
+                                <p>Iconic South Indian crispy crepe with potato filling.</p>
+                                <div class="recipe-card-meta">
+                                    <span>South Indian</span>
+                                    <span>⭐ 4.9 (410)</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="recipe-card">
+                        <a href="/recipe/dhokla">
+                            <img src="images/dhokla.jpg" alt="Spongy and light Gujarati Dhokla" class="recipe-card-img">
+                            <div class="recipe-card-content">
+                                <h3>Khaman Dhokla</h3>
+                                <p>A fluffy, savory snack from Gujarat.</p>
+                                <div class="recipe-card-meta">
+                                    <span>Gujarati</span>
+                                    <span>⭐ 4.7 (180)</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="trending-cuisines">
+                <h2>Explore by Region</h2>
+                <ul>
+                    <li><a href="/explore?region=north-indian">North Indian</a></li>
+                    <li><a href="/explore?region=south-indian">South Indian</a></li>
+                    <li><a href="/explore?region=bengali">Bengali</a></li>
+                    <li><a href="/explore?region=maharashtrian">Maharashtrian</a></li>
+                    </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div>
+                <h4>Swadh<span>Sathi</span></h4>
+                <p>Authentic Indian cooking, simplified by AI.</p>
+            </div>
+            <div>
+                <h4>Recipes</h4>
+                <ul>
+                    <li><a href="/explore?diet=veg">Vegetarian</a></li>
+                    <li><a href="/explore?diet=vegan">Vegan</a></li>
+                    <li><a href="/explore?time=30">Quick Meals</a></li>
+                    <li><a href="/explore?tag=festive">Festive Dishes</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="/terms">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Community</h4>
+                <ul>
+                    <li><a href="/community/north">North Indian Club</a></li>
+                    <li><a href="/community/south">South Indian Club</a></li>
+                    <li><a href="/submit-recipe">Submit a Recipe</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SwadhSathi. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
