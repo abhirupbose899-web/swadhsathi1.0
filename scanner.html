@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>AI Ingredient Scanner - What's in your pantry? - SwadhSathi</title>
+    
+    <meta name="description" content="No idea what to cook? Use SwadhSathi's AI scanner. Just upload a photo of your ingredients (paneer, tomato, etc.) and get instant recipe suggestions.">
+    
+    <link rel="canonical" href="https://www.swadhsathi.com/scanner">
+    
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+    <header class="main-header">
+        </header>
+
+    <main class="container">
+        
+        <div class="scanner-container">
+            <i class="icon-camera">📸</i> 
+            <h2>What's in your Kitchen?</h2>
+            <p>Upload or take a photo of your ingredients. Our AI will identify them and suggest recipes you can make right now.</p>
+            
+            <div class="upload-btn-wrapper">
+                <button class="btn btn-ai">Upload or Capture Photo</button>
+                <input type="file" name="ingredient_image" accept="image/*" capture="environment">
+            </div>
+
+            <div id="image-preview" style="margin-top: 20px;">
+                </div>
+            
+            <div id="detected-ingredients" style="margin-top: 20px;">
+                </div>
+        </div>
+        
+        <section id="ai-results" class="recipe-suggestions">
+            <h2>Suggested Recipes Based on Your Ingredients:</h2>
+            <div class="recipe-grid">
+                </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        </footer>
+
+</body>
+</html>
